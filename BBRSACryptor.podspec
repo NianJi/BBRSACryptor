@@ -7,16 +7,14 @@
 #
 
 Pod::Spec.new do |s|
-
   s.name         = "BBRSACryptor"
-  s.version      = "1.0"
+  s.version      = "0.0.1"
   s.summary      = "使用OpenSSL的Api进行RSA的加密和解密，支持公钥加密，私钥解密；私钥加密，公钥解密"
-  s.homepage     = "http://cnbluebox.com/BBRSACryptor"
+  s.homepage     = "http://git.sn.com/liukun/BBRSACryptor"
   s.license      = 'MIT'
-  s.author             = { "liukun" => "765409243@qq.com" }
+  s.author       = { "liukun" => "765409243@qq.com" }
   s.platform     = :ios, '5.0'
-  s.source       = { :git => "git@www.cnbluebox.com:BBRSACryptor.git", :tag => "1.0" }
-#  s.source       = { :git => "/Users/liukun/Code/bluebox/BBRSACryptor" }
+  s.source       = { :git => "git@git.sn.com:liukun/bbrsacryptor.git", :tag => "0.0.1" }
   s.source_files  = 'BBRSACryptor', 'BBRSACryptor/**/*.{h,m}'
   s.subspec 'GTMBase64' do |ss|
     ss.source_files = 'GTMBase64/*.{h,m}'
