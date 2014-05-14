@@ -105,7 +105,7 @@
         bpubkey = BIO_new(BIO_s_file());
         BIO_read_filename(bpubkey, publicKeyFileName);
         
-        _rsaPublic = PEM_read_bio_RSAPublicKey(bpubkey, NULL, NULL, NULL);
+        _rsaPublic = PEM_read_bio_RSA_PUBKEY(bpubkey, NULL, NULL, NULL);
         assert(_rsaPublic != NULL);
         BIO_free_all(bpubkey);
     }

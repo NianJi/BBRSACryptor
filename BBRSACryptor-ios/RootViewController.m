@@ -122,6 +122,21 @@
            forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:_buttonT];
     }
+    
+    {
+        UIButton *_buttonT = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+        _buttonT.frame = CGRectMake(44*5, top, 44, 44);
+        _buttonT.tag = 5;
+        [_buttonT setTitle:@"导入公钥" forState:UIControlStateNormal];
+        _buttonT.titleLabel.numberOfLines = 2;
+        _buttonT.titleLabel.lineBreakMode = NSLineBreakByCharWrapping;
+        _buttonT.titleLabel.font = [UIFont systemFontOfSize:15.0f];
+        [_buttonT setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [_buttonT addTarget:self
+                     action:@selector(buttonTapped:)
+           forControlEvents:UIControlEventTouchUpInside];
+        [self.view addSubview:_buttonT];
+    }
 }
 
 - (UITextView *)textView
@@ -206,6 +221,7 @@
                                     cancelButtonTitle:@"确定"
                                     otherButtonTitles:nil];
             [alert show];
+            return;
         }
         
         NSData *cipherData = [self.rsaCryptor encryptWithPublicKeyUsingPadding:RSA_PKCS1_PADDING plainData:[text dataUsingEncoding:NSUTF8StringEncoding]];
@@ -226,6 +242,7 @@
                                   cancelButtonTitle:@"确定"
                                   otherButtonTitles:nil];
             [alert show];
+            return;
         }
         
         NSData *cipherData = [GTMBase64 decodeString:text];
@@ -248,6 +265,7 @@
                                   cancelButtonTitle:@"确定"
                                   otherButtonTitles:nil];
             [alert show];
+            return;
         }
         
         NSData *cipherData = [self.rsaCryptor encryptWithPrivateKeyUsingPadding:RSA_PKCS1_PADDING plainData:[text dataUsingEncoding:NSUTF8StringEncoding]];
@@ -268,6 +286,7 @@
                                   cancelButtonTitle:@"确定"
                                   otherButtonTitles:nil];
             [alert show];
+            return;
         }
         
         NSData *cipherData = [GTMBase64 decodeString:text];
@@ -276,6 +295,37 @@
         NSString *str = [NSString stringWithFormat:@"解密可得: \n%@", plainText];
         
         [self appendStringToResultTextView:str];
+    }
+    else if (index == 5)
+    {
+        NSString *text = [self.textView.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+        
+        if (!text.length)
+        {
+            UIAlertView *alert = [[UIAlertView alloc]
+                                  initWithTitle:nil
+                                  message:@"请输入公钥"
+                                  delegate:nil
+                                  cancelButtonTitle:@"确定"
+                                  otherButtonTitles:nil];
+            [alert show];
+        }
+        
+        BOOL importSuccess = [self.rsaCryptor importRSAPublicKeyBase64:kRSAPublicKey];
+        UIAlertView *alert = [[UIAlertView alloc]
+                              initWithTitle:nil
+                              message:importSuccess? @"导入成功":@"导入失败"
+                              delegate:nil
+                              cancelButtonTitle:@"确定"
+                              otherButtonTitles:nil];
+        [alert show];
+        
+//        NSData *cipherData = [GTMBase64 decodeString:text];
+//        NSData *plainData = [self.rsaCryptor decryptWithPublicKeyUsingPadding:RSA_PADDING_TYPE_PKCS1 cipherData:cipherData];
+//        NSString *plainText = [[NSString alloc]initWithData:plainData encoding:NSUTF8StringEncoding];
+//        NSString *str = [NSString stringWithFormat:@"解密可得: \n%@", plainText];
+//        
+//        [self appendStringToResultTextView:str];
     }
 }
 
