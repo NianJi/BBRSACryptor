@@ -20,23 +20,8 @@
 		04C693DF18C0A6E5002E583E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C693DE18C0A6E5002E583E /* main.m */; };
 		04C693E318C0A6E5002E583E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C693E218C0A6E5002E583E /* AppDelegate.m */; };
 		04C693E518C0A6E5002E583E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04C693E418C0A6E5002E583E /* Images.xcassets */; };
-		04C693EC18C0A6E5002E583E /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04C693EB18C0A6E5002E583E /* XCTest.framework */; };
-		04C693ED18C0A6E5002E583E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04C693D218C0A6E5002E583E /* Foundation.framework */; };
-		04C693EE18C0A6E5002E583E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04C693D618C0A6E5002E583E /* UIKit.framework */; };
-		04C693F618C0A6E5002E583E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 04C693F418C0A6E5002E583E /* InfoPlist.strings */; };
-		04C693F818C0A6E5002E583E /* BBRSACryptorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C693F718C0A6E5002E583E /* BBRSACryptorTests.m */; };
 		04C6940518C0A7E9002E583E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04C6940418C0A7E9002E583E /* Security.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		04C693EF18C0A6E5002E583E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 04C693C718C0A6E5002E583E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 04C693CE18C0A6E5002E583E;
-			remoteInfo = BBRSACryptor;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		04BD931118DBD6C900B4515A /* GTMBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMBase64.h; sourceTree = "<group>"; };
@@ -135,7 +120,6 @@
 		04C693E118C0A6E5002E583E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		04C693E218C0A6E5002E583E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		04C693E418C0A6E5002E583E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		04C693EA18C0A6E5002E583E /* BBRSACryptor-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BBRSACryptor-iosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04C693EB18C0A6E5002E583E /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		04C693F318C0A6E5002E583E /* BBRSACryptor-iosTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BBRSACryptor-iosTests-Info.plist"; sourceTree = "<group>"; };
 		04C693F518C0A6E5002E583E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -154,16 +138,6 @@
 				04C693D518C0A6E5002E583E /* CoreGraphics.framework in Frameworks */,
 				04C693D718C0A6E5002E583E /* UIKit.framework in Frameworks */,
 				04C693D318C0A6E5002E583E /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		04C693E718C0A6E5002E583E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				04C693EC18C0A6E5002E583E /* XCTest.framework in Frameworks */,
-				04C693EE18C0A6E5002E583E /* UIKit.framework in Frameworks */,
-				04C693ED18C0A6E5002E583E /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,7 +289,6 @@
 			isa = PBXGroup;
 			children = (
 				04C693CF18C0A6E5002E583E /* BBRSACryptor-ios.app */,
-				04C693EA18C0A6E5002E583E /* BBRSACryptor-iosTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -394,24 +367,6 @@
 			productReference = 04C693CF18C0A6E5002E583E /* BBRSACryptor-ios.app */;
 			productType = "com.apple.product-type.application";
 		};
-		04C693E918C0A6E5002E583E /* BBRSACryptor-iosTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 04C693FE18C0A6E5002E583E /* Build configuration list for PBXNativeTarget "BBRSACryptor-iosTests" */;
-			buildPhases = (
-				04C693E618C0A6E5002E583E /* Sources */,
-				04C693E718C0A6E5002E583E /* Frameworks */,
-				04C693E818C0A6E5002E583E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				04C693F018C0A6E5002E583E /* PBXTargetDependency */,
-			);
-			name = "BBRSACryptor-iosTests";
-			productName = BBRSACryptorTests;
-			productReference = 04C693EA18C0A6E5002E583E /* BBRSACryptor-iosTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -420,11 +375,6 @@
 			attributes = {
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = liukun;
-				TargetAttributes = {
-					04C693E918C0A6E5002E583E = {
-						TestTargetID = 04C693CE18C0A6E5002E583E;
-					};
-				};
 			};
 			buildConfigurationList = 04C693CA18C0A6E5002E583E /* Build configuration list for PBXProject "BBRSACryptor-ios" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -439,7 +389,6 @@
 			projectRoot = "";
 			targets = (
 				04C693CE18C0A6E5002E583E /* BBRSACryptor-ios */,
-				04C693E918C0A6E5002E583E /* BBRSACryptor-iosTests */,
 			);
 		};
 /* End PBXProject section */
@@ -452,14 +401,6 @@
 				04BD936718DBD6C900B4515A /* LICENSE in Resources */,
 				04C693DD18C0A6E5002E583E /* InfoPlist.strings in Resources */,
 				04C693E518C0A6E5002E583E /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		04C693E818C0A6E5002E583E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				04C693F618C0A6E5002E583E /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -478,23 +419,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		04C693E618C0A6E5002E583E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				04C693F818C0A6E5002E583E /* BBRSACryptorTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		04C693F018C0A6E5002E583E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 04C693CE18C0A6E5002E583E /* BBRSACryptor-ios */;
-			targetProxy = 04C693EF18C0A6E5002E583E /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		04C693DB18C0A6E5002E583E /* InfoPlist.strings */ = {
@@ -595,7 +520,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
 				CLANG_CXX_LIBRARY = "compiler-default";
-				CODE_SIGN_IDENTITY = "iPhone Developer: Lan Feng (HP5D7TZA52)";
+				CODE_SIGN_IDENTITY = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BBRSACryptor-ios/BBRSACryptor-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -611,8 +536,8 @@
 					"$(PROJECT_DIR)/OpenSSL/lib",
 				);
 				PRODUCT_NAME = "BBRSACryptor-ios";
-				PROVISIONING_PROFILE = "FD4E4D43-D944-40A2-9B1D-1A876BE44A37";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "FD4E4D43-D944-40A2-9B1D-1A876BE44A37";
+				PROVISIONING_PROFILE = "c79a06c7-a3f2-4403-89a7-189e0f303eee";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "c79a06c7-a3f2-4403-89a7-189e0f303eee";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -624,7 +549,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
 				CLANG_CXX_LIBRARY = "compiler-default";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Suning Appliance Co., Ltd.";
+				CODE_SIGN_IDENTITY = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BBRSACryptor-ios/BBRSACryptor-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -640,49 +565,9 @@
 					"$(PROJECT_DIR)/OpenSSL/lib",
 				);
 				PRODUCT_NAME = "BBRSACryptor-ios";
-				PROVISIONING_PROFILE = "FB598505-5EE8-4FB2-A325-2045D8035E42";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "FB598505-5EE8-4FB2-A325-2045D8035E42";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
-		04C693FF18C0A6E5002E583E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BBRSACryptor.app/BBRSACryptor";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "BBRSACryptor/BBRSACryptor-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "BBRSACryptorTests/BBRSACryptor-iosTests-Info.plist";
-				PRODUCT_NAME = "BBRSACryptor-iosTests";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		04C6940018C0A6E5002E583E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BBRSACryptor.app/BBRSACryptor";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "BBRSACryptor/BBRSACryptor-Prefix.pch";
-				INFOPLIST_FILE = "BBRSACryptorTests/BBRSACryptor-iosTests-Info.plist";
-				PRODUCT_NAME = "BBRSACryptor-iosTests";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
 		};
@@ -703,15 +588,6 @@
 			buildConfigurations = (
 				04C693FC18C0A6E5002E583E /* Debug */,
 				04C693FD18C0A6E5002E583E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		04C693FE18C0A6E5002E583E /* Build configuration list for PBXNativeTarget "BBRSACryptor-iosTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				04C693FF18C0A6E5002E583E /* Debug */,
-				04C6940018C0A6E5002E583E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

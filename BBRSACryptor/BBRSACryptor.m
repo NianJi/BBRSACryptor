@@ -42,7 +42,7 @@
     
     const char *publicKeyFileName = [OpenSSLRSAPublicKeyFile cStringUsingEncoding:NSASCIIStringEncoding];
     const char *privateKeyFileName = [OpenSSLRSAPrivateKeyFile cStringUsingEncoding:NSASCIIStringEncoding];
-
+    
     //写入私钥和公钥
     RSA_blinding_on(_rsa, NULL);
     
@@ -54,7 +54,7 @@
     
     BIO_free(priBio);
     BIO_free(pubBio);
-
+    
     //分别获取公钥和私钥
     _rsaPrivate = RSAPrivateKey_dup(_rsa);
     assert(_rsaPrivate != NULL);
@@ -76,21 +76,21 @@
 {
     //格式化公钥
     NSMutableString *result = [NSMutableString string];
-	[result appendString:@"-----BEGIN PUBLIC KEY-----\n"];
-	int count = 0;
-	for (int i = 0; i < [publicKey length]; ++i) {
-		
-		unichar c = [publicKey characterAtIndex:i];
-		if (c == '\n' || c == '\r') {
-			continue;
-		}
-		[result appendFormat:@"%c", c];
-		if (++count == 64) {
-			[result appendString:@"\n"];
-			count = 0;
-		}
-	}
-	[result appendString:@"\n-----END PUBLIC KEY-----"];
+    [result appendString:@"-----BEGIN PUBLIC KEY-----\n"];
+    int count = 0;
+    for (int i = 0; i < [publicKey length]; ++i) {
+        
+        unichar c = [publicKey characterAtIndex:i];
+        if (c == '\n' || c == '\r') {
+            continue;
+        }
+        [result appendFormat:@"%c", c];
+        if (++count == 64) {
+            [result appendString:@"\n"];
+            count = 0;
+        }
+    }
+    [result appendString:@"\n-----END PUBLIC KEY-----"];
     [result writeToFile:OpenSSLRSAPublicKeyFile
              atomically:YES
                encoding:NSASCIIStringEncoding
@@ -119,28 +119,28 @@
     const char *pstr = [privateKey UTF8String];
     int len = (int)[privateKey length];
     NSMutableString *result = [NSMutableString string];
-	[result appendString:@"-----BEGIN RSA PRIVATE KEY-----\n"];
+    [result appendString:@"-----BEGIN RSA PRIVATE KEY-----\n"];
     int index = 0;
-	int count = 0;
+    int count = 0;
     while (index < len) {
         char ch = pstr[index];
-		if (ch == '\r' || ch == '\n') {
-			++index;
-			continue;
-		}
+        if (ch == '\r' || ch == '\n') {
+            ++index;
+            continue;
+        }
         [result appendFormat:@"%c", ch];
         if (++count == 64)
         {
             [result appendString:@"\n"];
-			count = 0;
+            count = 0;
         }
         index++;
     }
-	[result appendString:@"\n-----END RSA PRIVATE KEY-----"];
-    return [result writeToFile:OpenSSLRSAPrivateKeyFile
-                    atomically:YES
-                      encoding:NSASCIIStringEncoding
-                         error:NULL];
+    [result appendString:@"\n-----END RSA PRIVATE KEY-----"];
+    [result writeToFile:OpenSSLRSAPrivateKeyFile
+             atomically:YES
+               encoding:NSASCIIStringEncoding
+                  error:NULL];
     
     FILE *privateKeyFile;
     const char *privateKeyFileName = [OpenSSLRSAPrivateKeyFile cStringUsingEncoding:NSASCIIStringEncoding];
