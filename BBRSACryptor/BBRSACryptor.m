@@ -50,7 +50,10 @@
     PEM_write_bio_RSAPrivateKey(priBio, _rsa, NULL, NULL, 0, NULL, NULL);
     
     BIO *pubBio = BIO_new_file(publicKeyFileName, "w");
-    PEM_write_bio_RSAPublicKey(pubBio, _rsa);
+    
+    
+    PEM_write_bio_RSA_PUBKEY(pubBio, _rsa);
+//    PEM_write_bio_RSAPublicKey(pubBio, _rsa);
     
     BIO_free(priBio);
     BIO_free(pubBio);
