@@ -198,12 +198,12 @@
         const char *ddesc = BN_bn2hex(d);
         NSString *d_objc = [NSString stringWithCString:ddesc encoding:NSASCIIStringEncoding];
         
-        NSString *str = [NSString stringWithFormat:@"产生长度为1024的密钥对：\n 模n:\n%@ \n 公钥指数e: %@ \n 私钥指数d:\n%@ \n 公钥base64: \n %@ \n 私钥base64: \n %@",
+        NSString *str = [NSString stringWithFormat:@"产生长度为1024的密钥对：\n 模n:\n%@ \n 公钥指数e: %@ \n 私钥指数d:\n%@ \n 公钥PEM: \n %@ \n 私钥PEM: \n %@",
                          n_objc,
                          e_objc,
                          d_objc,
-                         [self.rsaCryptor base64EncodedPublicKey],
-                         [self.rsaCryptor base64EncodedPrivateKey]
+                         [self.rsaCryptor PEMFormatPublicKey],
+                         [self.rsaCryptor PEMFormatPrivateKey]
                          ];
         
         [self appendStringToResultTextView:str];

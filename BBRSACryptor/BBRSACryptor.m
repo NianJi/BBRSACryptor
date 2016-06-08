@@ -75,6 +75,76 @@
     }
 }
 
+/**
+ *  read public key from pem format data
+ *  @param PEMData pem format key file data,
+ *         like: -----BEGIN PUBLIC KEY-----   xxxxx  -----END PUBLIC KEY-----
+ *  @return success or not.
+ */
+- (BOOL)importRSAPublicKeyPEMData:(NSData *)PEMData
+{
+    const void *bytes = [PEMData bytes];
+    
+    BIO *bio = BIO_new_mem_buf((void *)bytes, (int)PEMData.length);
+    _rsaPublic = PEM_read_bio_RSA_PUBKEY(bio, NULL, NULL, NULL);
+    assert(_rsaPublic != NULL);
+    BIO_free_all(bio);
+    
+    return _rsaPublic ? YES : NO;
+}
+
+/**
+ *  read public key from der format data
+ *  @param DERData der format key file data.
+ *  @return success or not.
+ */
+- (BOOL)importRSAPublicKeyDERData:(NSData *)DERData
+{
+    const void *bytes = [DERData bytes];
+    
+    BIO *bio = BIO_new_mem_buf((void *)bytes, (int)DERData.length);
+    _rsaPublic = d2i_RSA_PUBKEY_bio(bio, NULL);
+    assert(_rsaPublic != NULL);
+    BIO_free_all(bio);
+    
+    return _rsaPublic ? YES : NO;
+}
+
+/**
+ *  read private key from pem format data
+ *  @param PEMData pem format key file data,
+ *         like: -----BEGIN RSA PRIVATE KEY-----   xxxxx  -----END RSA PRIVATE KEY-----
+ *  @return success or not.
+ */
+- (BOOL)importRSAPrivateKeyPEMData:(NSData *)PEMData
+{
+    const void *bytes = [PEMData bytes];
+    
+    BIO *bio = BIO_new_mem_buf((void *)bytes, (int)PEMData.length);
+    _rsaPrivate = PEM_read_bio_RSAPrivateKey(bio, NULL, NULL, NULL);
+    assert(_rsaPrivate != NULL);
+    BIO_free_all(bio);
+    
+    return _rsaPrivate ? YES : NO;
+}
+
+/**
+ *  read private key from der format data
+ *  @param DERData der format key file data.
+ *  @return success or not.
+ */
+- (BOOL)importRSAPrivateKeyDERData:(NSData *)DERData
+{
+    const void *bytes = [DERData bytes];
+    
+    BIO *bio = BIO_new_mem_buf((void *)bytes, (int)DERData.length);
+    _rsaPrivate = d2i_RSAPrivateKey_bio(bio, NULL);
+    assert(_rsaPrivate != NULL);
+    BIO_free_all(bio);
+    
+    return _rsaPrivate ? YES : NO;
+}
+
 - (BOOL)importRSAPublicKeyBase64:(NSString *)publicKey
 {
     //格式化公钥
@@ -160,6 +230,48 @@
     }
     
     return YES;
+}
+
+/**
+ *  get PEM format string of public key
+ *  @return pem key file content
+ */
+- (NSString *)PEMFormatPublicKey
+{
+    if (!_rsaPublic) {
+        return nil;
+    }
+    
+    BIO *bio = BIO_new(BIO_s_mem());
+    PEM_write_bio_RSA_PUBKEY(bio, _rsaPublic);
+    
+    BUF_MEM *bptr;
+    BIO_get_mem_ptr(bio, &bptr);
+    BIO_set_close(bio, BIO_NOCLOSE); /* So BIO_free() leaves BUF_MEM alone */
+    BIO_free(bio);
+
+    return [NSString stringWithUTF8String:bptr->data];
+}
+
+/**
+ *  get PEM format string of private key
+ *  @return pem key file content
+ */
+- (NSString *)PEMFormatPrivateKey
+{
+    if (!_rsaPrivate) {
+        return nil;
+    }
+    
+    BIO *bio = BIO_new(BIO_s_mem());
+    PEM_write_bio_RSAPrivateKey(bio, _rsaPrivate, NULL, NULL, 0, NULL, NULL);
+    
+    BUF_MEM *bptr;
+    BIO_get_mem_ptr(bio, &bptr);
+    BIO_set_close(bio, BIO_NOCLOSE); /* So BIO_free() leaves BUF_MEM alone */
+    BIO_free(bio);
+    
+    return [NSString stringWithUTF8String:bptr->data];
 }
 
 - (NSString *)base64EncodedPublicKey
