@@ -21,7 +21,6 @@ typedef NS_ENUM(NSInteger, RSA_PADDING_TYPE) {
 };
 
 typedef NS_ENUM(int, RSA_SIGN_DIGEST_TYPE) {
-    RSA_SIGN_DIGEST_TYPE_SHA = NID_sha,
     RSA_SIGN_DIGEST_TYPE_SHA1 = NID_sha1,
     RSA_SIGN_DIGEST_TYPE_SHA256 = NID_sha256,
     RSA_SIGN_DIGEST_TYPE_SHA384 = NID_sha384,
@@ -157,19 +156,6 @@ typedef NS_ENUM(int, RSA_SIGN_DIGEST_TYPE) {
 - (BOOL)verifyWithPublicKeyUsingDigest:(RSA_SIGN_DIGEST_TYPE)type
                               signData:(NSData *)signData
                              plainData:(NSData *)plainData;
-
-/**
- *  sign data with private key.
- */
-- (NSData *)signWithPublicKeyUsingDigest:(RSA_SIGN_DIGEST_TYPE)type
-                               plainData:(NSData *)plainData;
-
-/**
- *  verify the sign is ok or not using private key.
- */
-- (BOOL)verifyWithPrivateKeyUsingDigest:(RSA_SIGN_DIGEST_TYPE)type
-                               signData:(NSData *)signData
-                              plainData:(NSData *)plainData;
 
 @end
 

@@ -7,6 +7,8 @@
 //
 
 #import "BBRSACryptor.h"
+#import <CommonCrypto/CommonCrypto.h>
+
 
 #define DocumentsDir [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject]
 #define OpenSSLRSAKeyDir [DocumentsDir stringByAppendingPathComponent:@".openssl_rsa"]
@@ -238,6 +240,7 @@
  */
 - (NSString *)PEMFormatPublicKey
 {
+    NSAssert(_rsaPublic != NULL, @"You should import public key first");
     if (!_rsaPublic) {
         return nil;
     }
@@ -259,6 +262,7 @@
  */
 - (NSString *)PEMFormatPrivateKey
 {
+    NSAssert(_rsaPrivate != NULL, @"You should import private key first");
     if (!_rsaPrivate) {
         return nil;
     }
@@ -400,6 +404,88 @@
     }
     
     return nil;
+}
+
+- (NSData *)digestDataOfData:(NSData *)plainData withType:(RSA_SIGN_DIGEST_TYPE)type
+{
+    if (!plainData.length) {
+        return nil;
+    }
+    
+#define digestWithType(type) \
+    unsigned char digest[CC_##type##_DIGEST_LENGTH];\
+    CC_##type([plainData bytes], (unsigned int)[plainData length], digest);\
+    NSData *result = [NSData dataWithBytes:digest length:CC_##type##_DIGEST_LENGTH];\
+    return result;\
+
+    switch (type) {
+        case RSA_SIGN_DIGEST_TYPE_SHA1:
+        {
+            digestWithType(SHA1);
+        }
+            break;
+        case RSA_SIGN_DIGEST_TYPE_SHA256:
+        {
+            digestWithType(SHA256);
+        }
+            break;
+        case RSA_SIGN_DIGEST_TYPE_SHA224:
+        {
+            digestWithType(SHA224);
+        }
+            break;
+        case RSA_SIGN_DIGEST_TYPE_SHA384:
+        {
+            digestWithType(SHA384);
+        }
+            break;
+        case RSA_SIGN_DIGEST_TYPE_SHA512:
+        {
+            digestWithType(SHA512);
+        }
+            break;
+        case RSA_SIGN_DIGEST_TYPE_MD5:
+        {
+            digestWithType(MD5);
+        }
+            break;
+        default:
+            break;
+    }
+    return nil;
+}
+
+- (NSData *)signWithPrivateKeyUsingDigest:(RSA_SIGN_DIGEST_TYPE)type plainData:(NSData *)plainData
+{
+    NSAssert(_rsaPrivate != NULL, @"You should import private key first");
+    
+    NSData *digestData = [self digestDataOfData:plainData withType:type];
+    
+    unsigned int len = 0;
+    unsigned int signLen = RSA_size(_rsaPrivate);
+    unsigned char *sign = malloc(signLen);
+    memset(sign, 0, signLen);
+    
+    int ret = RSA_sign(type, [digestData bytes], (unsigned int)[digestData length], sign, &len, _rsaPrivate);
+    if (ret == 1) {
+        NSData *data = [NSData dataWithBytes:sign length:len];
+        free(sign);
+        return data;
+    }
+    free(sign);
+    return nil;
+}
+
+- (BOOL)verifyWithPublicKeyUsingDigest:(RSA_SIGN_DIGEST_TYPE)type signData:(NSData *)signData plainData:(NSData *)plainData
+{
+    NSAssert(_rsaPublic != NULL, @"You should import public key first");
+    NSData *digestData = [self digestDataOfData:plainData withType:type];
+    
+    int ret = RSA_verify(type, [digestData bytes], (unsigned int)[digestData length], [signData bytes], (unsigned int)[signData length], _rsaPublic);
+    if (ret == 1) {
+        return YES;
+    }
+    return NO;
 }
 
 @end
