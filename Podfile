@@ -10,6 +10,15 @@ pod 'OpenSSL'
 
 end
 
+target 'BBRSACryptorTests' do
+
+	platform :ios, '6.0'
+
+	pod 'GTMBase64'
+	pod 'OpenSSL'	
+
+end
+
 target 'rsatool' do
     platform :osx, '10.10'
 

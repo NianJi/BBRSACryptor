@@ -1,1322 +1,774 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>archiveVersion</key>
-	<string>1</string>
-	<key>classes</key>
-	<dict/>
-	<key>objectVersion</key>
-	<string>46</string>
-	<key>objects</key>
-	<dict>
-		<key>04BD930F18DBD6C900B4515A</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>04BD936A18DBD74D00B4515A</string>
-				<string>04BD936B18DBD74D00B4515A</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>BBRSACryptor</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>04BD936A18DBD74D00B4515A</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>BBRSACryptor.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>04BD936B18DBD74D00B4515A</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>BBRSACryptor.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>04BD936C18DBD74D00B4515A</key>
-		<dict>
-			<key>fileRef</key>
-			<string>04BD936B18DBD74D00B4515A</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>04BD936D18DC3C7000B4515A</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>RootViewController.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>04BD936E18DC3C7100B4515A</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>RootViewController.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>04BD936F18DC3C7100B4515A</key>
-		<dict>
-			<key>fileRef</key>
-			<string>04BD936E18DC3C7100B4515A</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>04C693C618C0A6E5002E583E</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>04BD930F18DBD6C900B4515A</string>
-				<string>04C693D818C0A6E5002E583E</string>
-				<string>04C693F118C0A6E5002E583E</string>
-				<string>A37B58F41D083BF800064059</string>
-				<string>04C693D118C0A6E5002E583E</string>
-				<string>04C693D018C0A6E5002E583E</string>
-				<string>862C84D8D7E64FDA0DBF448A</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>04C693C718C0A6E5002E583E</key>
-		<dict>
-			<key>attributes</key>
-			<dict>
-				<key>LastUpgradeCheck</key>
-				<string>0510</string>
-				<key>ORGANIZATIONNAME</key>
-				<string>liukun</string>
-				<key>TargetAttributes</key>
-				<dict>
-					<key>A37B58F21D083BF800064059</key>
-					<dict>
-						<key>CreatedOnToolsVersion</key>
-						<string>7.3.1</string>
-					</dict>
-				</dict>
-			</dict>
-			<key>buildConfigurationList</key>
-			<string>04C693CA18C0A6E5002E583E</string>
-			<key>compatibilityVersion</key>
-			<string>Xcode 3.2</string>
-			<key>developmentRegion</key>
-			<string>English</string>
-			<key>hasScannedForEncodings</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXProject</string>
-			<key>knownRegions</key>
-			<array>
-				<string>en</string>
-			</array>
-			<key>mainGroup</key>
-			<string>04C693C618C0A6E5002E583E</string>
-			<key>productRefGroup</key>
-			<string>04C693D018C0A6E5002E583E</string>
-			<key>projectDirPath</key>
-			<string></string>
-			<key>projectReferences</key>
-			<array/>
-			<key>projectRoot</key>
-			<string></string>
-			<key>targets</key>
-			<array>
-				<string>04C693CE18C0A6E5002E583E</string>
-				<string>A37B58F21D083BF800064059</string>
-			</array>
-		</dict>
-		<key>04C693CA18C0A6E5002E583E</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>04C693F918C0A6E5002E583E</string>
-				<string>04C693FA18C0A6E5002E583E</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>04C693CB18C0A6E5002E583E</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>04C693E318C0A6E5002E583E</string>
-				<string>04BD936C18DBD74D00B4515A</string>
-				<string>04C693DF18C0A6E5002E583E</string>
-				<string>04BD936F18DC3C7100B4515A</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>04C693CC18C0A6E5002E583E</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>04C6940518C0A7E9002E583E</string>
-				<string>04C693D518C0A6E5002E583E</string>
-				<string>04C693D718C0A6E5002E583E</string>
-				<string>04C693D318C0A6E5002E583E</string>
-				<string>1C1AD2D1B86BDD7F09FD8CD4</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>04C693CD18C0A6E5002E583E</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>04C693DD18C0A6E5002E583E</string>
-				<string>04C693E518C0A6E5002E583E</string>
-			</array>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>04C693CE18C0A6E5002E583E</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>04C693FB18C0A6E5002E583E</string>
-			<key>buildPhases</key>
-			<array>
-				<string>A25929DC5424D04762C9E6A8</string>
-				<string>04C693CB18C0A6E5002E583E</string>
-				<string>04C693CC18C0A6E5002E583E</string>
-				<string>04C693CD18C0A6E5002E583E</string>
-				<string>6CDDD24018976BCE7B66BBAA</string>
-				<string>2E43C045B2428477E8B64240</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>BBRSACryptor-ios</string>
-			<key>productName</key>
-			<string>BBRSACryptor</string>
-			<key>productReference</key>
-			<string>04C693CF18C0A6E5002E583E</string>
-			<key>productType</key>
-			<string>com.apple.product-type.application</string>
-		</dict>
-		<key>04C693CF18C0A6E5002E583E</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.application</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>BBRSACryptor-ios.app</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>04C693D018C0A6E5002E583E</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>04C693CF18C0A6E5002E583E</string>
-				<string>A37B58F31D083BF800064059</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>04C693D118C0A6E5002E583E</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>04C6940418C0A7E9002E583E</string>
-				<string>04C693D218C0A6E5002E583E</string>
-				<string>04C693D418C0A6E5002E583E</string>
-				<string>04C693D618C0A6E5002E583E</string>
-				<string>04C693EB18C0A6E5002E583E</string>
-				<string>F078447D0DB844957DB2242B</string>
-				<string>804908EF5F19E78A0E5888CE</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>04C693D218C0A6E5002E583E</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>Foundation.framework</string>
-			<key>path</key>
-			<string>System/Library/Frameworks/Foundation.framework</string>
-			<key>sourceTree</key>
-			<string>SDKROOT</string>
-		</dict>
-		<key>04C693D318C0A6E5002E583E</key>
-		<dict>
-			<key>fileRef</key>
-			<string>04C693D218C0A6E5002E583E</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>04C693D418C0A6E5002E583E</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>CoreGraphics.framework</string>
-			<key>path</key>
-			<string>System/Library/Frameworks/CoreGraphics.framework</string>
-			<key>sourceTree</key>
-			<string>SDKROOT</string>
-		</dict>
-		<key>04C693D518C0A6E5002E583E</key>
-		<dict>
-			<key>fileRef</key>
-			<string>04C693D418C0A6E5002E583E</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>04C693D618C0A6E5002E583E</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>UIKit.framework</string>
-			<key>path</key>
-			<string>System/Library/Frameworks/UIKit.framework</string>
-			<key>sourceTree</key>
-			<string>SDKROOT</string>
-		</dict>
-		<key>04C693D718C0A6E5002E583E</key>
-		<dict>
-			<key>fileRef</key>
-			<string>04C693D618C0A6E5002E583E</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>04C693D818C0A6E5002E583E</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>04C693E118C0A6E5002E583E</string>
-				<string>04C693E218C0A6E5002E583E</string>
-				<string>04BD936D18DC3C7000B4515A</string>
-				<string>04BD936E18DC3C7100B4515A</string>
-				<string>04C693E418C0A6E5002E583E</string>
-				<string>04C693D918C0A6E5002E583E</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>BBRSACryptor-ios</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>04C693D918C0A6E5002E583E</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>04C693DA18C0A6E5002E583E</string>
-				<string>04C693DB18C0A6E5002E583E</string>
-				<string>04C693DE18C0A6E5002E583E</string>
-				<string>04C693E018C0A6E5002E583E</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Supporting Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>04C693DA18C0A6E5002E583E</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>BBRSACryptor-Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>04C693DB18C0A6E5002E583E</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>04C693DC18C0A6E5002E583E</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>InfoPlist.strings</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>04C693DC18C0A6E5002E583E</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.strings</string>
-			<key>name</key>
-			<string>en</string>
-			<key>path</key>
-			<string>en.lproj/InfoPlist.strings</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>04C693DD18C0A6E5002E583E</key>
-		<dict>
-			<key>fileRef</key>
-			<string>04C693DB18C0A6E5002E583E</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>04C693DE18C0A6E5002E583E</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>main.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>04C693DF18C0A6E5002E583E</key>
-		<dict>
-			<key>fileRef</key>
-			<string>04C693DE18C0A6E5002E583E</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>04C693E018C0A6E5002E583E</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>BBRSACryptor-Prefix.pch</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>04C693E118C0A6E5002E583E</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>AppDelegate.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>04C693E218C0A6E5002E583E</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>AppDelegate.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>04C693E318C0A6E5002E583E</key>
-		<dict>
-			<key>fileRef</key>
-			<string>04C693E218C0A6E5002E583E</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>04C693E418C0A6E5002E583E</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>folder.assetcatalog</string>
-			<key>path</key>
-			<string>Images.xcassets</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>04C693E518C0A6E5002E583E</key>
-		<dict>
-			<key>fileRef</key>
-			<string>04C693E418C0A6E5002E583E</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>04C693EB18C0A6E5002E583E</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>XCTest.framework</string>
-			<key>path</key>
-			<string>Library/Frameworks/XCTest.framework</string>
-			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
-		</dict>
-		<key>04C693F118C0A6E5002E583E</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>04C693F718C0A6E5002E583E</string>
-				<string>04C693F218C0A6E5002E583E</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>BBRSACryptorTests</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>04C693F218C0A6E5002E583E</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>04C693F318C0A6E5002E583E</string>
-				<string>04C693F418C0A6E5002E583E</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Supporting Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>04C693F318C0A6E5002E583E</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>BBRSACryptor-iosTests-Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>04C693F418C0A6E5002E583E</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>04C693F518C0A6E5002E583E</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>InfoPlist.strings</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>04C693F518C0A6E5002E583E</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.strings</string>
-			<key>name</key>
-			<string>en</string>
-			<key>path</key>
-			<string>en.lproj/InfoPlist.strings</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>04C693F718C0A6E5002E583E</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>BBRSACryptorTests.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>04C693F918C0A6E5002E583E</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
-				<string>NO</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>5.0</string>
-				<key>ONLY_ACTIVE_ARCH</key>
-				<string>YES</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>04C693FA18C0A6E5002E583E</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>YES</string>
-				<key>ENABLE_NS_ASSERTIONS</key>
-				<string>NO</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>5.0</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>04C693FB18C0A6E5002E583E</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>04C693FC18C0A6E5002E583E</string>
-				<string>04C693FD18C0A6E5002E583E</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>04C693FC18C0A6E5002E583E</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>62365763B0BED3C6AA6342EB</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME</key>
-				<string>LaunchImage</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>compiler-default</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>compiler-default</string>
-				<key>CODE_SIGN_IDENTITY</key>
-				<string></string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>BBRSACryptor-ios/BBRSACryptor-Prefix.pch</string>
-				<key>HEADER_SEARCH_PATHS</key>
-				<array>
-					<string>$(inherited)</string>
-					<string>/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include</string>
-					<string>./OpenSSL/include</string>
-					<string>./GTMBase64</string>
-					<string>./BBRSACryptor</string>
-				</array>
-				<key>INFOPLIST_FILE</key>
-				<string>BBRSACryptor-ios/BBRSACryptor-Info.plist</string>
-				<key>LIBRARY_SEARCH_PATHS</key>
-				<array>
-					<string>$(inherited)</string>
-					<string>$(PROJECT_DIR)/OpenSSL/lib</string>
-				</array>
-				<key>PRODUCT_NAME</key>
-				<string>BBRSACryptor-ios</string>
-				<key>PROVISIONING_PROFILE</key>
-				<string>c79a06c7-a3f2-4403-89a7-189e0f303eee</string>
-				<key>PROVISIONING_PROFILE[sdk=iphoneos*]</key>
-				<string>c79a06c7-a3f2-4403-89a7-189e0f303eee</string>
-				<key>WRAPPER_EXTENSION</key>
-				<string>app</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>04C693FD18C0A6E5002E583E</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>8F4D6C15249F119CF0E03770</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME</key>
-				<string>LaunchImage</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>compiler-default</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>compiler-default</string>
-				<key>CODE_SIGN_IDENTITY</key>
-				<string></string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>BBRSACryptor-ios/BBRSACryptor-Prefix.pch</string>
-				<key>HEADER_SEARCH_PATHS</key>
-				<array>
-					<string>$(inherited)</string>
-					<string>/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include</string>
-					<string>./OpenSSL/include</string>
-					<string>./GTMBase64</string>
-					<string>./BBRSACryptor</string>
-				</array>
-				<key>INFOPLIST_FILE</key>
-				<string>BBRSACryptor-ios/BBRSACryptor-Info.plist</string>
-				<key>LIBRARY_SEARCH_PATHS</key>
-				<array>
-					<string>$(inherited)</string>
-					<string>$(PROJECT_DIR)/OpenSSL/lib</string>
-				</array>
-				<key>PRODUCT_NAME</key>
-				<string>BBRSACryptor-ios</string>
-				<key>PROVISIONING_PROFILE</key>
-				<string></string>
-				<key>PROVISIONING_PROFILE[sdk=iphoneos*]</key>
-				<string></string>
-				<key>WRAPPER_EXTENSION</key>
-				<string>app</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>04C6940418C0A7E9002E583E</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>Security.framework</string>
-			<key>path</key>
-			<string>System/Library/Frameworks/Security.framework</string>
-			<key>sourceTree</key>
-			<string>SDKROOT</string>
-		</dict>
-		<key>04C6940518C0A7E9002E583E</key>
-		<dict>
-			<key>fileRef</key>
-			<string>04C6940418C0A7E9002E583E</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>1C1AD2D1B86BDD7F09FD8CD4</key>
-		<dict>
-			<key>fileRef</key>
-			<string>F078447D0DB844957DB2242B</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>2E43C045B2428477E8B64240</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Copy Pods Resources</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-BBRSACryptor-ios/Pods-BBRSACryptor-ios-resources.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>62365763B0BED3C6AA6342EB</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-BBRSACryptor-ios.debug.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-BBRSACryptor-ios/Pods-BBRSACryptor-ios.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>6CDDD24018976BCE7B66BBAA</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Embed Pods Frameworks</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-BBRSACryptor-ios/Pods-BBRSACryptor-ios-frameworks.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>804908EF5F19E78A0E5888CE</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>libPods-rsatool.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>862C84D8D7E64FDA0DBF448A</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>62365763B0BED3C6AA6342EB</string>
-				<string>8F4D6C15249F119CF0E03770</string>
-				<string>B122DEB61CC15D2E63053BF6</string>
-				<string>C474C393CA10837D122B1FB3</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8F4D6C15249F119CF0E03770</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-BBRSACryptor-ios.release.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-BBRSACryptor-ios/Pods-BBRSACryptor-ios.release.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>93A5A11050A0A97FEAE583F7</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Copy Pods Resources</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-rsatool/Pods-rsatool-resources.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>A25929DC5424D04762C9E6A8</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Check Pods Manifest.lock</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
-if [[ $? != 0 ]] ; then
-    cat &lt;&lt; EOM
-error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
-EOM
-    exit 1
-fi
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>A37B58EF1D083BF800064059</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>A37B58FA1D08502000064059</string>
-				<string>A37B58F61D083BF800064059</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>A37B58F01D083BF800064059</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>BEF2009ABBE002ABEE483FDB</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>A37B58F11D083BF800064059</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>dstPath</key>
-			<string>/usr/share/man/man1/</string>
-			<key>dstSubfolderSpec</key>
-			<string>0</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXCopyFilesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>1</string>
-		</dict>
-		<key>A37B58F21D083BF800064059</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>A37B58F91D083BF800064059</string>
-			<key>buildPhases</key>
-			<array>
-				<string>B07C50870DE9512B6D45ED55</string>
-				<string>A37B58EF1D083BF800064059</string>
-				<string>A37B58F01D083BF800064059</string>
-				<string>A37B58F11D083BF800064059</string>
-				<string>93A5A11050A0A97FEAE583F7</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>rsatool</string>
-			<key>productName</key>
-			<string>rsatool</string>
-			<key>productReference</key>
-			<string>A37B58F31D083BF800064059</string>
-			<key>productType</key>
-			<string>com.apple.product-type.tool</string>
-		</dict>
-		<key>A37B58F31D083BF800064059</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>compiled.mach-o.executable</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>rsatool</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>A37B58F41D083BF800064059</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>A37B58F51D083BF800064059</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>rsatool</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A37B58F51D083BF800064059</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>main.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A37B58F61D083BF800064059</key>
-		<dict>
-			<key>fileRef</key>
-			<string>A37B58F51D083BF800064059</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>A37B58F71D083BF800064059</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>B122DEB61CC15D2E63053BF6</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>CLANG_ANALYZER_NONNULL</key>
-				<string>YES</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY</key>
-				<string>-</string>
-				<key>DEBUG_INFORMATION_FORMAT</key>
-				<string>dwarf</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>ENABLE_TESTABILITY</key>
-				<string>YES</string>
-				<key>GCC_NO_COMMON_BLOCKS</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES_AGGRESSIVE</string>
-				<key>MACOSX_DEPLOYMENT_TARGET</key>
-				<string>10.11</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>YES</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>macosx</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>A37B58F81D083BF800064059</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>C474C393CA10837D122B1FB3</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>CLANG_ANALYZER_NONNULL</key>
-				<string>YES</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY</key>
-				<string>-</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>DEBUG_INFORMATION_FORMAT</key>
-				<string>dwarf-with-dsym</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_NO_COMMON_BLOCKS</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES_AGGRESSIVE</string>
-				<key>MACOSX_DEPLOYMENT_TARGET</key>
-				<string>10.11</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>NO</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>macosx</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>A37B58F91D083BF800064059</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>A37B58F71D083BF800064059</string>
-				<string>A37B58F81D083BF800064059</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>A37B58FA1D08502000064059</key>
-		<dict>
-			<key>fileRef</key>
-			<string>04BD936B18DBD74D00B4515A</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>B07C50870DE9512B6D45ED55</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Check Pods Manifest.lock</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
-if [[ $? != 0 ]] ; then
-    cat &lt;&lt; EOM
-error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
-EOM
-    exit 1
-fi
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>B122DEB61CC15D2E63053BF6</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-rsatool.debug.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-rsatool/Pods-rsatool.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>BEF2009ABBE002ABEE483FDB</key>
-		<dict>
-			<key>fileRef</key>
-			<string>804908EF5F19E78A0E5888CE</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C474C393CA10837D122B1FB3</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-rsatool.release.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-rsatool/Pods-rsatool.release.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F078447D0DB844957DB2242B</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>libPods-BBRSACryptor-ios.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-	</dict>
-	<key>rootObject</key>
-	<string>04C693C718C0A6E5002E583E</string>
-</dict>
-</plist>
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		04BD936C18DBD74D00B4515A /* BBRSACryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BD936B18DBD74D00B4515A /* BBRSACryptor.m */; };
+		04BD936F18DC3C7100B4515A /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BD936E18DC3C7100B4515A /* RootViewController.m */; };
+		04C693D318C0A6E5002E583E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04C693D218C0A6E5002E583E /* Foundation.framework */; };
+		04C693D518C0A6E5002E583E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04C693D418C0A6E5002E583E /* CoreGraphics.framework */; };
+		04C693D718C0A6E5002E583E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04C693D618C0A6E5002E583E /* UIKit.framework */; };
+		04C693DD18C0A6E5002E583E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 04C693DB18C0A6E5002E583E /* InfoPlist.strings */; };
+		04C693DF18C0A6E5002E583E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C693DE18C0A6E5002E583E /* main.m */; };
+		04C693E318C0A6E5002E583E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C693E218C0A6E5002E583E /* AppDelegate.m */; };
+		04C693E518C0A6E5002E583E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04C693E418C0A6E5002E583E /* Images.xcassets */; };
+		04C6940518C0A7E9002E583E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04C6940418C0A7E9002E583E /* Security.framework */; };
+		09DD7231EBF1730E569AB8EC /* libPods-BBRSACryptor-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 677388B766875EF1CD3B6E53 /* libPods-BBRSACryptor-ios.a */; };
+		31389538737B0BDBB4C6166E /* libPods-rsatool.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B6C6939CE62662536D47AC7 /* libPods-rsatool.a */; };
+		3D4BA7781EB189CA00304DDC /* BBRSACryptorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4BA7771EB189CA00304DDC /* BBRSACryptorTests.m */; };
+		43BA8FAF443AFEE623D9BBB1 /* libPods-BBRSACryptorTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 42AD3D454E841072D431DF72 /* libPods-BBRSACryptorTests.a */; };
+		A37B58F61D083BF800064059 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A37B58F51D083BF800064059 /* main.m */; };
+		A37B58FA1D08502000064059 /* BBRSACryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BD936B18DBD74D00B4515A /* BBRSACryptor.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3D4BA77A1EB189CA00304DDC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04C693C718C0A6E5002E583E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 04C693CE18C0A6E5002E583E;
+			remoteInfo = "BBRSACryptor-ios";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A37B58F11D083BF800064059 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		04BD936A18DBD74D00B4515A /* BBRSACryptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBRSACryptor.h; sourceTree = "<group>"; };
+		04BD936B18DBD74D00B4515A /* BBRSACryptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBRSACryptor.m; sourceTree = "<group>"; };
+		04BD936D18DC3C7000B4515A /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		04BD936E18DC3C7100B4515A /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		04C693CF18C0A6E5002E583E /* BBRSACryptor-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BBRSACryptor-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		04C693D218C0A6E5002E583E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		04C693D418C0A6E5002E583E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		04C693D618C0A6E5002E583E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		04C693DA18C0A6E5002E583E /* BBRSACryptor-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BBRSACryptor-Info.plist"; sourceTree = "<group>"; };
+		04C693DC18C0A6E5002E583E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		04C693DE18C0A6E5002E583E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		04C693E018C0A6E5002E583E /* BBRSACryptor-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BBRSACryptor-Prefix.pch"; sourceTree = "<group>"; };
+		04C693E118C0A6E5002E583E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		04C693E218C0A6E5002E583E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		04C693E418C0A6E5002E583E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		04C693EB18C0A6E5002E583E /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		04C6940418C0A7E9002E583E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		23254F5A46F2598892E7BE77 /* Pods-rsatool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rsatool.debug.xcconfig"; path = "Pods/Target Support Files/Pods-rsatool/Pods-rsatool.debug.xcconfig"; sourceTree = "<group>"; };
+		2905B374FFCE4E85DA770F5F /* Pods-rsatool.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rsatool.release.xcconfig"; path = "Pods/Target Support Files/Pods-rsatool/Pods-rsatool.release.xcconfig"; sourceTree = "<group>"; };
+		3B6C6939CE62662536D47AC7 /* libPods-rsatool.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-rsatool.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D4BA7751EB189CA00304DDC /* BBRSACryptorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BBRSACryptorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D4BA7771EB189CA00304DDC /* BBRSACryptorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBRSACryptorTests.m; sourceTree = "<group>"; };
+		3D4BA7791EB189CA00304DDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		42AD3D454E841072D431DF72 /* libPods-BBRSACryptorTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BBRSACryptorTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		666194AF2B9D2981A9D35222 /* Pods-BBRSACryptorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BBRSACryptorTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BBRSACryptorTests/Pods-BBRSACryptorTests.release.xcconfig"; sourceTree = "<group>"; };
+		677388B766875EF1CD3B6E53 /* libPods-BBRSACryptor-ios.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BBRSACryptor-ios.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A37B58F31D083BF800064059 /* rsatool */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = rsatool; sourceTree = BUILT_PRODUCTS_DIR; };
+		A37B58F51D083BF800064059 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BE836E63FD7F49418AF8C927 /* Pods-BBRSACryptor-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BBRSACryptor-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BBRSACryptor-ios/Pods-BBRSACryptor-ios.debug.xcconfig"; sourceTree = "<group>"; };
+		DE919879CFED3A55DBCFFC89 /* Pods-BBRSACryptor-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BBRSACryptor-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-BBRSACryptor-ios/Pods-BBRSACryptor-ios.release.xcconfig"; sourceTree = "<group>"; };
+		E1ED12864A55AC3225DA3985 /* Pods-BBRSACryptorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BBRSACryptorTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BBRSACryptorTests/Pods-BBRSACryptorTests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		04C693CC18C0A6E5002E583E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04C6940518C0A7E9002E583E /* Security.framework in Frameworks */,
+				04C693D518C0A6E5002E583E /* CoreGraphics.framework in Frameworks */,
+				04C693D718C0A6E5002E583E /* UIKit.framework in Frameworks */,
+				04C693D318C0A6E5002E583E /* Foundation.framework in Frameworks */,
+				09DD7231EBF1730E569AB8EC /* libPods-BBRSACryptor-ios.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D4BA7721EB189CA00304DDC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43BA8FAF443AFEE623D9BBB1 /* libPods-BBRSACryptorTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A37B58F01D083BF800064059 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				31389538737B0BDBB4C6166E /* libPods-rsatool.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		04BD930F18DBD6C900B4515A /* BBRSACryptor */ = {
+			isa = PBXGroup;
+			children = (
+				04BD936A18DBD74D00B4515A /* BBRSACryptor.h */,
+				04BD936B18DBD74D00B4515A /* BBRSACryptor.m */,
+			);
+			path = BBRSACryptor;
+			sourceTree = "<group>";
+		};
+		04C693C618C0A6E5002E583E = {
+			isa = PBXGroup;
+			children = (
+				04BD930F18DBD6C900B4515A /* BBRSACryptor */,
+				04C693D818C0A6E5002E583E /* BBRSACryptor-ios */,
+				A37B58F41D083BF800064059 /* rsatool */,
+				3D4BA7761EB189CA00304DDC /* BBRSACryptorTests */,
+				04C693D118C0A6E5002E583E /* Frameworks */,
+				04C693D018C0A6E5002E583E /* Products */,
+				CF61F04DB90D8B045F30ABE6 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		04C693D018C0A6E5002E583E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				04C693CF18C0A6E5002E583E /* BBRSACryptor-ios.app */,
+				A37B58F31D083BF800064059 /* rsatool */,
+				3D4BA7751EB189CA00304DDC /* BBRSACryptorTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		04C693D118C0A6E5002E583E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				04C6940418C0A7E9002E583E /* Security.framework */,
+				04C693D218C0A6E5002E583E /* Foundation.framework */,
+				04C693D418C0A6E5002E583E /* CoreGraphics.framework */,
+				04C693D618C0A6E5002E583E /* UIKit.framework */,
+				04C693EB18C0A6E5002E583E /* XCTest.framework */,
+				677388B766875EF1CD3B6E53 /* libPods-BBRSACryptor-ios.a */,
+				3B6C6939CE62662536D47AC7 /* libPods-rsatool.a */,
+				42AD3D454E841072D431DF72 /* libPods-BBRSACryptorTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		04C693D818C0A6E5002E583E /* BBRSACryptor-ios */ = {
+			isa = PBXGroup;
+			children = (
+				04C693E118C0A6E5002E583E /* AppDelegate.h */,
+				04C693E218C0A6E5002E583E /* AppDelegate.m */,
+				04BD936D18DC3C7000B4515A /* RootViewController.h */,
+				04BD936E18DC3C7100B4515A /* RootViewController.m */,
+				04C693E418C0A6E5002E583E /* Images.xcassets */,
+				04C693D918C0A6E5002E583E /* Supporting Files */,
+			);
+			path = "BBRSACryptor-ios";
+			sourceTree = "<group>";
+		};
+		04C693D918C0A6E5002E583E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				04C693DA18C0A6E5002E583E /* BBRSACryptor-Info.plist */,
+				04C693DB18C0A6E5002E583E /* InfoPlist.strings */,
+				04C693DE18C0A6E5002E583E /* main.m */,
+				04C693E018C0A6E5002E583E /* BBRSACryptor-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3D4BA7761EB189CA00304DDC /* BBRSACryptorTests */ = {
+			isa = PBXGroup;
+			children = (
+				3D4BA7771EB189CA00304DDC /* BBRSACryptorTests.m */,
+				3D4BA7791EB189CA00304DDC /* Info.plist */,
+			);
+			path = BBRSACryptorTests;
+			sourceTree = "<group>";
+		};
+		A37B58F41D083BF800064059 /* rsatool */ = {
+			isa = PBXGroup;
+			children = (
+				A37B58F51D083BF800064059 /* main.m */,
+			);
+			path = rsatool;
+			sourceTree = "<group>";
+		};
+		CF61F04DB90D8B045F30ABE6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BE836E63FD7F49418AF8C927 /* Pods-BBRSACryptor-ios.debug.xcconfig */,
+				DE919879CFED3A55DBCFFC89 /* Pods-BBRSACryptor-ios.release.xcconfig */,
+				23254F5A46F2598892E7BE77 /* Pods-rsatool.debug.xcconfig */,
+				2905B374FFCE4E85DA770F5F /* Pods-rsatool.release.xcconfig */,
+				E1ED12864A55AC3225DA3985 /* Pods-BBRSACryptorTests.debug.xcconfig */,
+				666194AF2B9D2981A9D35222 /* Pods-BBRSACryptorTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		04C693CE18C0A6E5002E583E /* BBRSACryptor-ios */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04C693FB18C0A6E5002E583E /* Build configuration list for PBXNativeTarget "BBRSACryptor-ios" */;
+			buildPhases = (
+				9EFDA6A615578030575C2864 /* [CP] Check Pods Manifest.lock */,
+				04C693CB18C0A6E5002E583E /* Sources */,
+				04C693CC18C0A6E5002E583E /* Frameworks */,
+				04C693CD18C0A6E5002E583E /* Resources */,
+				5245DB0BDA5A49709F773416 /* [CP] Embed Pods Frameworks */,
+				4C78FE21BB52574727707BE6 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "BBRSACryptor-ios";
+			productName = BBRSACryptor;
+			productReference = 04C693CF18C0A6E5002E583E /* BBRSACryptor-ios.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3D4BA7741EB189CA00304DDC /* BBRSACryptorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3D4BA77C1EB189CA00304DDC /* Build configuration list for PBXNativeTarget "BBRSACryptorTests" */;
+			buildPhases = (
+				9F20EDCF27DA297FB33FF7AE /* [CP] Check Pods Manifest.lock */,
+				3D4BA7711EB189CA00304DDC /* Sources */,
+				3D4BA7721EB189CA00304DDC /* Frameworks */,
+				3D4BA7731EB189CA00304DDC /* Resources */,
+				80F4AB5777C1AA064CDCAE2A /* [CP] Embed Pods Frameworks */,
+				E32E86D0A09651AEB5B3AE7A /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3D4BA77B1EB189CA00304DDC /* PBXTargetDependency */,
+			);
+			name = BBRSACryptorTests;
+			productName = BBRSACryptorTests;
+			productReference = 3D4BA7751EB189CA00304DDC /* BBRSACryptorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A37B58F21D083BF800064059 /* rsatool */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A37B58F91D083BF800064059 /* Build configuration list for PBXNativeTarget "rsatool" */;
+			buildPhases = (
+				A1DB570461087B37E7F49AED /* [CP] Check Pods Manifest.lock */,
+				A37B58EF1D083BF800064059 /* Sources */,
+				A37B58F01D083BF800064059 /* Frameworks */,
+				A37B58F11D083BF800064059 /* CopyFiles */,
+				492D36C3FE518028170256AB /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = rsatool;
+			productName = rsatool;
+			productReference = A37B58F31D083BF800064059 /* rsatool */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		04C693C718C0A6E5002E583E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = liukun;
+				TargetAttributes = {
+					3D4BA7741EB189CA00304DDC = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 04C693CE18C0A6E5002E583E;
+					};
+					A37B58F21D083BF800064059 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 04C693CA18C0A6E5002E583E /* Build configuration list for PBXProject "BBRSACryptor-ios" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 04C693C618C0A6E5002E583E;
+			productRefGroup = 04C693D018C0A6E5002E583E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				04C693CE18C0A6E5002E583E /* BBRSACryptor-ios */,
+				A37B58F21D083BF800064059 /* rsatool */,
+				3D4BA7741EB189CA00304DDC /* BBRSACryptorTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		04C693CD18C0A6E5002E583E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04C693DD18C0A6E5002E583E /* InfoPlist.strings in Resources */,
+				04C693E518C0A6E5002E583E /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D4BA7731EB189CA00304DDC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		492D36C3FE518028170256AB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-rsatool/Pods-rsatool-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4C78FE21BB52574727707BE6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BBRSACryptor-ios/Pods-BBRSACryptor-ios-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5245DB0BDA5A49709F773416 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BBRSACryptor-ios/Pods-BBRSACryptor-ios-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		80F4AB5777C1AA064CDCAE2A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BBRSACryptorTests/Pods-BBRSACryptorTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9EFDA6A615578030575C2864 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9F20EDCF27DA297FB33FF7AE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A1DB570461087B37E7F49AED /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E32E86D0A09651AEB5B3AE7A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BBRSACryptorTests/Pods-BBRSACryptorTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		04C693CB18C0A6E5002E583E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04C693E318C0A6E5002E583E /* AppDelegate.m in Sources */,
+				04BD936C18DBD74D00B4515A /* BBRSACryptor.m in Sources */,
+				04C693DF18C0A6E5002E583E /* main.m in Sources */,
+				04BD936F18DC3C7100B4515A /* RootViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D4BA7711EB189CA00304DDC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D4BA7781EB189CA00304DDC /* BBRSACryptorTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A37B58EF1D083BF800064059 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A37B58FA1D08502000064059 /* BBRSACryptor.m in Sources */,
+				A37B58F61D083BF800064059 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3D4BA77B1EB189CA00304DDC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 04C693CE18C0A6E5002E583E /* BBRSACryptor-ios */;
+			targetProxy = 3D4BA77A1EB189CA00304DDC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		04C693DB18C0A6E5002E583E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04C693DC18C0A6E5002E583E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		04C693F918C0A6E5002E583E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		04C693FA18C0A6E5002E583E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		04C693FC18C0A6E5002E583E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE836E63FD7F49418AF8C927 /* Pods-BBRSACryptor-ios.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				CODE_SIGN_IDENTITY = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BBRSACryptor-ios/BBRSACryptor-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					./OpenSSL/include,
+					./GTMBase64,
+					./BBRSACryptor,
+				);
+				INFOPLIST_FILE = "BBRSACryptor-ios/BBRSACryptor-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/OpenSSL/lib",
+				);
+				PRODUCT_NAME = "BBRSACryptor-ios";
+				PROVISIONING_PROFILE = "c79a06c7-a3f2-4403-89a7-189e0f303eee";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "c79a06c7-a3f2-4403-89a7-189e0f303eee";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		04C693FD18C0A6E5002E583E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE919879CFED3A55DBCFFC89 /* Pods-BBRSACryptor-ios.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				CODE_SIGN_IDENTITY = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BBRSACryptor-ios/BBRSACryptor-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					./OpenSSL/include,
+					./GTMBase64,
+					./BBRSACryptor,
+				);
+				INFOPLIST_FILE = "BBRSACryptor-ios/BBRSACryptor-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/OpenSSL/lib",
+				);
+				PRODUCT_NAME = "BBRSACryptor-ios";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		3D4BA77D1EB189CA00304DDC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E1ED12864A55AC3225DA3985 /* Pods-BBRSACryptorTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = BBRSACryptorTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.longxdragon.BBRSACryptorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BBRSACryptor-ios.app/BBRSACryptor-ios";
+			};
+			name = Debug;
+		};
+		3D4BA77E1EB189CA00304DDC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 666194AF2B9D2981A9D35222 /* Pods-BBRSACryptorTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = BBRSACryptorTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.longxdragon.BBRSACryptorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BBRSACryptor-ios.app/BBRSACryptor-ios";
+			};
+			name = Release;
+		};
+		A37B58F71D083BF800064059 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 23254F5A46F2598892E7BE77 /* Pods-rsatool.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "-";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		A37B58F81D083BF800064059 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2905B374FFCE4E85DA770F5F /* Pods-rsatool.release.xcconfig */;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		04C693CA18C0A6E5002E583E /* Build configuration list for PBXProject "BBRSACryptor-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04C693F918C0A6E5002E583E /* Debug */,
+				04C693FA18C0A6E5002E583E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04C693FB18C0A6E5002E583E /* Build configuration list for PBXNativeTarget "BBRSACryptor-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04C693FC18C0A6E5002E583E /* Debug */,
+				04C693FD18C0A6E5002E583E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3D4BA77C1EB189CA00304DDC /* Build configuration list for PBXNativeTarget "BBRSACryptorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D4BA77D1EB189CA00304DDC /* Debug */,
+				3D4BA77E1EB189CA00304DDC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A37B58F91D083BF800064059 /* Build configuration list for PBXNativeTarget "rsatool" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A37B58F71D083BF800064059 /* Debug */,
+				A37B58F81D083BF800064059 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 04C693C718C0A6E5002E583E /* Project object */;
+}
