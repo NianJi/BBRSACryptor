@@ -313,19 +313,29 @@
     if ([plainData length])
     {
         int len = (int)[plainData length];
-        unsigned char *plainBuffer = (unsigned char *)[plainData bytes];
-        
         //result len
         int clen = RSA_size(_rsaPublic);
-        unsigned char *cipherBuffer = calloc(clen, sizeof(unsigned char));
+        int blocklen = clen - 11;
+        int blockCount = (int)ceil((double)len/blocklen);
         
-        RSA_public_encrypt(len,plainBuffer,cipherBuffer, _rsaPublic,  padding);
-        
-        NSData *cipherData = [[NSData alloc] initWithBytes:cipherBuffer length:clen];
-        
-        free(cipherBuffer);
-        
-        return cipherData;
+        NSMutableData *mutableData = [NSMutableData data];
+        for (int i = 0; i < blockCount; i++) {
+            int loc = i * blocklen;
+            int reallen = MIN(blocklen, len - loc);
+            NSData *segmentData = [plainData subdataWithRange:NSMakeRange(loc, reallen)];
+            
+            unsigned char *cipherBuffer = calloc(clen, sizeof(unsigned char));
+            unsigned char *segmentBuffer = (unsigned char *)[segmentData bytes];
+            RSA_public_encrypt(reallen, segmentBuffer, cipherBuffer, _rsaPublic,  padding);
+            
+            NSData *cipherData = [[NSData alloc] initWithBytes:cipherBuffer length:clen];
+            if (cipherData) {
+                [mutableData appendData:cipherData];
+            }
+            
+            free(cipherBuffer);
+        }
+        return [mutableData copy];
     }
     
     return nil;
@@ -338,19 +348,29 @@
     if ([plainData length])
     {
         int len = (int)[plainData length];
-        unsigned char *plainBuffer = (unsigned char *)[plainData bytes];
-        
         //result len
         int clen = RSA_size(_rsaPrivate);
-        unsigned char *cipherBuffer = calloc(clen, sizeof(unsigned char));
+        int blocklen = clen - 11;
+        int blockCount = (int)ceil((double)len/blocklen);
         
-        RSA_private_encrypt(len,plainBuffer,cipherBuffer, _rsaPrivate,  padding);
-        
-        NSData *cipherData = [[NSData alloc] initWithBytes:cipherBuffer length:clen];
-        
-        free(cipherBuffer);
-        
-        return cipherData;
+        NSMutableData *mutableData = [NSMutableData data];
+        for (int i = 0; i < blockCount; i++) {
+            int loc = i * blocklen;
+            int reallen = MIN(blocklen, len - loc);
+            NSData *segmentData = [plainData subdataWithRange:NSMakeRange(loc, reallen)];
+            
+            unsigned char *cipherBuffer = calloc(clen, sizeof(unsigned char));
+            unsigned char *segmentBuffer = (unsigned char *)[segmentData bytes];
+            RSA_public_encrypt(reallen, segmentBuffer, cipherBuffer, _rsaPrivate,  padding);
+            
+            NSData *cipherData = [[NSData alloc] initWithBytes:cipherBuffer length:clen];
+            if (cipherData) {
+                [mutableData appendData:cipherData];
+            }
+            
+            free(cipherBuffer);
+        }
+        return [mutableData copy];
     }
     
     return nil;
@@ -363,19 +383,29 @@
     if ([cipherData length])
     {
         int len = (int)[cipherData length];
-        unsigned char *cipherBuffer = (unsigned char *)[cipherData bytes];
-        
         //result len
         int mlen = RSA_size(_rsaPrivate);
-        unsigned char *plainBuffer = calloc(mlen, sizeof(unsigned char));
+        int blocklen = mlen;
+        int blockCount = (int)ceil((double)len/blocklen);
         
-        RSA_private_decrypt(len, cipherBuffer, plainBuffer, _rsaPrivate, padding);
-        
-        NSData *plainData = [[NSData alloc] initWithBytes:plainBuffer length:mlen];
-        
-        free(plainBuffer);
-        
-        return plainData;
+        NSMutableData *mutableData = [NSMutableData data];
+        for (int i = 0; i < blockCount; i++) {
+            int loc = i * blocklen;
+            int reallen = MIN(blocklen, len - loc);
+            NSData *segmentData = [cipherData subdataWithRange:NSMakeRange(loc, reallen)];
+            
+            unsigned char *plainBuffer = calloc(mlen, sizeof(unsigned char));
+            unsigned char *segmentBuffer = (unsigned char *)[segmentData bytes];
+            RSA_private_decrypt(reallen, segmentBuffer, plainBuffer, _rsaPrivate, padding);
+            
+            NSData *plainData = [[NSData alloc] initWithBytes:plainBuffer length:strlen((char *)plainBuffer)];
+            if (plainData) {
+                [mutableData appendData:plainData];
+            }
+            
+            free(plainBuffer);
+        }
+        return [mutableData copy];
     }
     
     return nil;
@@ -388,19 +418,29 @@
     if ([cipherData length])
     {
         int len = (int)[cipherData length];
-        unsigned char *cipherBuffer = (unsigned char *)[cipherData bytes];
-        
         //result len
-        int mlen = RSA_size(_rsaPublic);
-        unsigned char *plainBuffer = calloc(mlen, sizeof(unsigned char));
+        int mlen = RSA_size(_rsaPrivate);
+        int blocklen = mlen;
+        int blockCount = (int)ceil((double)len/blocklen);
         
-        RSA_public_decrypt(len, cipherBuffer, plainBuffer, _rsaPublic, padding);
-        
-        NSData *plainData = [[NSData alloc] initWithBytes:plainBuffer length:mlen];
-        
-        free(plainBuffer);
-        
-        return plainData;
+        NSMutableData *mutableData = [NSMutableData data];
+        for (int i = 0; i < blockCount; i++) {
+            int loc = i * blocklen;
+            int reallen = MIN(blocklen, len - loc);
+            NSData *segmentData = [cipherData subdataWithRange:NSMakeRange(loc, reallen)];
+            
+            unsigned char *plainBuffer = calloc(mlen, sizeof(unsigned char));
+            unsigned char *segmentBuffer = (unsigned char *)[segmentData bytes];
+            RSA_public_decrypt(reallen, segmentBuffer, plainBuffer, _rsaPrivate, padding);
+            
+            NSData *plainData = [[NSData alloc] initWithBytes:plainBuffer length:strlen((char *)plainBuffer)];
+            if (plainData) {
+                [mutableData appendData:cipherData];
+            }
+            
+            free(plainBuffer);
+        }
+        return [mutableData copy];
     }
     
     return nil;
