@@ -6,8 +6,7 @@ Pod::Spec.new do |s|
   s.homepage     = "https://github.com/NianJi/BBRSACryptor"
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
   s.author       = { "liukun" => "765409243@qq.com" }
-  s.ios.deployment_target = '6.0'
-  s.osx.deployment_target = '10.10'
+  s.platform     = :ios, '6.0'
   s.source       = { :git => "https://github.com/NianJi/BBRSACryptor.git", :tag => "0.0.5" }
   s.source_files  = 'BBRSACryptor', 'BBRSACryptor/**/*.{h,m}'
   s.frameworks = 'Foundation'
