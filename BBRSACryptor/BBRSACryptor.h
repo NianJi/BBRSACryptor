@@ -159,32 +159,32 @@ typedef NS_ENUM(int, RSA_SIGN_DIGEST_TYPE) {
 
 @end
 
-@interface BBRSACryptor (DEPRECATE)
+@interface BBRSACryptor (StringInput)
 
 /**
  @abstract  import public key, call before 'encryptWithPublicKey'
  @param     publicKey with base64 encoded
  @return    Success or not.
  */
-- (BOOL)importRSAPublicKeyBase64:(NSString *)publicKey DEPRECATED_MSG_ATTRIBUTE("it's not safe just write string in code, use -importRSAPublicKeyPEMData:");
+- (BOOL)importRSAPublicKeyBase64:(NSString *)publicKey;
 
 /**
  @abstract  import private key, call before 'decryptWithPrivateKey'
  @param privateKey with base64 encoded
  @return Success or not.
  */
-- (BOOL)importRSAPrivateKeyBase64:(NSString *)privateKey DEPRECATED_MSG_ATTRIBUTE("it's not safe just write string in code, use -importRSAPublicKeyPEMData:");
+- (BOOL)importRSAPrivateKeyBase64:(NSString *)privateKey;
 
 /**
  @abstract  export public key, 'generateRSAKeyPairWithKeySize' or 'importRSAPublicKeyBase64' should call before this method
  @return    public key base64 encoded
  */
-- (NSString *)base64EncodedPublicKey DEPRECATED_MSG_ATTRIBUTE("use -PEMFormatPublicKey");
+- (NSString *)base64EncodedPublicKey;
 
 /**
  @abstract  export public key, 'generateRSAKeyPairWithKeySize' or 'importRSAPrivateKeyBase64' should call before this method
  @return    private key base64 encoded
  */
-- (NSString *)base64EncodedPrivateKey DEPRECATED_MSG_ATTRIBUTE("use -PEMFormatPrivateKey");
+- (NSString *)base64EncodedPrivateKey;
 
 @end
