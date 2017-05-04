@@ -15,7 +15,22 @@
 #define OpenSSLRSAPublicKeyFile [OpenSSLRSAKeyDir stringByAppendingPathComponent:@"bb.publicKey.pem"]
 #define OpenSSLRSAPrivateKeyFile [OpenSSLRSAKeyDir stringByAppendingPathComponent:@"bb.privateKey.pem"]
 
+#define BBRSAAssert(condition) NSAssert((condition), @"Invalid: %@", @#condition)
+
 @implementation BBRSACryptor
+
+- (void)dealloc
+{
+    if (_rsa) {
+        RSA_free(_rsa);
+    }
+    if (_rsaPublic) {
+        RSA_free(_rsaPublic);
+    }
+    if (_rsaPrivate) {
+        RSA_free(_rsaPrivate);
+    }
+}
 
 - (instancetype)init
 {
@@ -32,6 +47,22 @@
     return self;
 }
 
+- (void)setPublicKey:(RSA *)publicKey
+{
+    if (_rsaPublic) {
+        RSA_free(_rsaPublic);
+    }
+    _rsaPublic = publicKey;
+}
+
+- (void)setPrivateKey:(RSA *)privateKey
+{
+    if (_rsaPrivate) {
+        RSA_free(_rsaPrivate);
+    }
+    _rsaPrivate = privateKey;
+}
+
 - (BOOL)generateRSAKeyPairWithKeySize:(int)keySize
 {
     if (NULL != _rsa)
@@ -40,7 +71,7 @@
         _rsa = NULL;
     }
     _rsa = RSA_generate_key(keySize,RSA_F4,NULL,NULL);
-    assert(_rsa != NULL);
+    BBRSAAssert(_rsa != NULL);
     
     const char *publicKeyFileName = [OpenSSLRSAPublicKeyFile cStringUsingEncoding:NSASCIIStringEncoding];
     const char *privateKeyFileName = [OpenSSLRSAPrivateKeyFile cStringUsingEncoding:NSASCIIStringEncoding];
@@ -55,17 +86,18 @@
     
     
     PEM_write_bio_RSA_PUBKEY(pubBio, _rsa);
-//    PEM_write_bio_RSAPublicKey(pubBio, _rsa);
+
     
     BIO_free(priBio);
     BIO_free(pubBio);
     
     //分别获取公钥和私钥
-    _rsaPrivate = RSAPrivateKey_dup(_rsa);
-    assert(_rsaPrivate != NULL);
+    [self setPrivateKey:RSAPrivateKey_dup(_rsa)];
+    BBRSAAssert(_rsaPrivate != NULL);
     
-    _rsaPublic = RSAPublicKey_dup(_rsa);
-    assert(_rsaPublic != NULL);
+    
+    [self setPublicKey:RSAPublicKey_dup(_rsa)];
+    BBRSAAssert(_rsaPublic != NULL);
     
     if (_rsa && _rsaPublic && _rsaPrivate)
     {
@@ -88,8 +120,10 @@
     const void *bytes = [PEMData bytes];
     
     BIO *bio = BIO_new_mem_buf((void *)bytes, (int)PEMData.length);
-    _rsaPublic = PEM_read_bio_RSA_PUBKEY(bio, NULL, NULL, NULL);
-    assert(_rsaPublic != NULL);
+    
+    [self setPublicKey:PEM_read_bio_RSA_PUBKEY(bio, NULL, NULL, NULL)];
+
+    BBRSAAssert(_rsaPublic != NULL);
     BIO_free_all(bio);
     
     return _rsaPublic ? YES : NO;
@@ -105,8 +139,10 @@
     const void *bytes = [DERData bytes];
     
     BIO *bio = BIO_new_mem_buf((void *)bytes, (int)DERData.length);
-    _rsaPublic = d2i_RSA_PUBKEY_bio(bio, NULL);
-    assert(_rsaPublic != NULL);
+    
+    [self setPublicKey:d2i_RSA_PUBKEY_bio(bio, NULL)];
+
+    BBRSAAssert(_rsaPublic != NULL);
     BIO_free_all(bio);
     
     return _rsaPublic ? YES : NO;
@@ -123,8 +159,8 @@
     const void *bytes = [PEMData bytes];
     
     BIO *bio = BIO_new_mem_buf((void *)bytes, (int)PEMData.length);
-    _rsaPrivate = PEM_read_bio_RSAPrivateKey(bio, NULL, NULL, NULL);
-    assert(_rsaPrivate != NULL);
+    [self setPrivateKey:PEM_read_bio_RSAPrivateKey(bio, NULL, NULL, NULL)];
+    BBRSAAssert(_rsaPrivate != NULL);
     BIO_free_all(bio);
     
     return _rsaPrivate ? YES : NO;
@@ -140,8 +176,8 @@
     const void *bytes = [DERData bytes];
     
     BIO *bio = BIO_new_mem_buf((void *)bytes, (int)DERData.length);
-    _rsaPrivate = d2i_RSAPrivateKey_bio(bio, NULL);
-    assert(_rsaPrivate != NULL);
+    [self setPrivateKey:d2i_RSAPrivateKey_bio(bio, NULL)];
+    BBRSAAssert(_rsaPrivate != NULL);
     BIO_free_all(bio);
     
     return _rsaPrivate ? YES : NO;
@@ -180,9 +216,10 @@
         bpubkey = BIO_new(BIO_s_file());
         BIO_read_filename(bpubkey, publicKeyFileName);
         
-        _rsaPublic = PEM_read_bio_RSA_PUBKEY(bpubkey, NULL, NULL, NULL);
-        assert(_rsaPublic != NULL);
+        [self setPublicKey:PEM_read_bio_RSA_PUBKEY(bpubkey, NULL, NULL, NULL)];
+        BBRSAAssert(_rsaPublic != NULL);
         BIO_free_all(bpubkey);
+        fclose(publicKeyFile);
     }
     
     return YES;
@@ -226,9 +263,10 @@
         bpubkey = BIO_new(BIO_s_file());
         BIO_read_filename(bpubkey, privateKeyFileName);
         
-        _rsaPrivate = PEM_read_bio_RSAPrivateKey(bpubkey, NULL, NULL, NULL);
-        assert(_rsaPrivate != NULL);
+        [self setPrivateKey:PEM_read_bio_RSAPrivateKey(bpubkey, NULL, NULL, NULL)];
+        BBRSAAssert(_rsaPrivate != NULL);
         BIO_free_all(bpubkey);
+        fclose(privateKeyFile);
     }
     
     return YES;
