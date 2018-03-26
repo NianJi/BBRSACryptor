@@ -34,6 +34,9 @@ typedef NS_ENUM(int, RSA_SIGN_DIGEST_TYPE) {
     RSA *_rsaPublic;
     RSA *_rsaPrivate;
     
+    EVP_PKEY *_priKey;
+    X509 *_cert;
+    
     @public
     RSA *_rsa;
 }
@@ -79,6 +82,14 @@ typedef NS_ENUM(int, RSA_SIGN_DIGEST_TYPE) {
                 [rsaCryptor importRSAPublicKeyDERData:derData];
  */
 - (BOOL)importRSAPublicKeyDERData:(NSData *)DERData;
+
+/**
+ *  read public key from pkcs12 format data. (*.p12)
+ *  @param data of the p12 file
+ *  @return success or not.
+ *  @discussion use ./rsatool to read data
+ */
+- (BOOL)importKeysFromP12Data:(NSData *)p12Data password:(NSString *)password;
 
 /**
  *  read private key from pem format data

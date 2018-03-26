@@ -8,7 +8,7 @@
 
 #import "BBRSACryptor.h"
 #import <CommonCrypto/CommonCrypto.h>
-
+#import <openssl/pkcs12.h>
 
 #define DocumentsDir [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject]
 #define OpenSSLRSAKeyDir [DocumentsDir stringByAppendingPathComponent:@".openssl_rsa"]
@@ -29,6 +29,12 @@
     }
     if (_rsaPrivate) {
         RSA_free(_rsaPrivate);
+    }
+    if (_priKey) {
+        EVP_PKEY_free(_priKey);
+    }
+    if (_cert) {
+        X509_free(_cert);
     }
 }
 
@@ -146,6 +152,43 @@
     BIO_free_all(bio);
     
     return _rsaPublic ? YES : NO;
+}
+
+- (BOOL)importKeysFromP12Data:(NSData *)p12Data password:(NSString *)password
+{
+    if (!p12Data) {
+        return NO;
+    }
+    
+    OpenSSL_add_all_algorithms();
+
+    const void *bytes = [p12Data bytes];
+    
+    BIO *bio = BIO_new_mem_buf((void *)bytes, (int)p12Data.length);
+    
+    EVP_PKEY *pkey;
+    X509 *cert;
+    STACK_OF(X509) *ca = NULL;
+    PKCS12 *p12;
+    
+    p12 = d2i_PKCS12_bio(bio, NULL);
+    
+    int parseRet = PKCS12_parse(p12, [password UTF8String], &pkey, &cert, &ca);
+    PKCS12_free(p12);
+    
+    if (parseRet == 0) {
+        return NO;
+    }
+    
+    if (pkey) {
+        _priKey = pkey;
+    }
+    if (cert) {
+        _cert = cert;
+    }
+    
+    BIO_free_all(bio);
+    return YES;
 }
 
 /**
@@ -344,15 +387,36 @@
     return nil;
 }
 
+- (RSA *)getKey:(BOOL)isPrivate
+{
+    if (isPrivate) {
+        if (_rsaPrivate) {
+            return _rsaPrivate;
+        }
+        if (_priKey) {
+            return _priKey->pkey.rsa;
+        }
+    } else {
+        if (_rsaPublic) {
+            return _rsaPublic;
+        }
+        if (_cert) {
+            return _cert->cert_info->key->pkey->pkey.rsa;
+        }
+    }
+    return nil;
+}
+
 - (NSData *)encryptWithPublicKeyUsingPadding:(RSA_PADDING_TYPE)padding plainData:(NSData *)plainData
 {
-    NSAssert(_rsaPublic != NULL, @"You should import public key first");
+    RSA *pubkey = [self getKey:NO];
+    NSAssert(pubkey != NULL, @"You should import public key first");
     
     if ([plainData length])
     {
         int len = (int)[plainData length];
         //result len
-        int clen = RSA_size(_rsaPublic);
+        int clen = RSA_size(pubkey);
         int blocklen = clen - 11;
         int blockCount = (int)ceil((double)len/blocklen);
         
@@ -364,7 +428,7 @@
             
             unsigned char *cipherBuffer = calloc(clen, sizeof(unsigned char));
             unsigned char *segmentBuffer = (unsigned char *)[segmentData bytes];
-            RSA_public_encrypt(reallen, segmentBuffer, cipherBuffer, _rsaPublic,  padding);
+            RSA_public_encrypt(reallen, segmentBuffer, cipherBuffer, pubkey,  padding);
             
             NSData *cipherData = [[NSData alloc] initWithBytes:cipherBuffer length:clen];
             if (cipherData) {
@@ -381,13 +445,14 @@
 
 - (NSData *)encryptWithPrivateKeyUsingPadding:(RSA_PADDING_TYPE)padding plainData:(NSData *)plainData
 {
-    NSAssert(_rsaPrivate != NULL, @"You should import private key first");
+    RSA *privateKey = [self getKey:YES];
+    NSAssert(privateKey != NULL, @"You should import private key first");
     
     if ([plainData length])
     {
         int len = (int)[plainData length];
         //result len
-        int clen = RSA_size(_rsaPrivate);
+        int clen = RSA_size(privateKey);
         int blocklen = clen - 11;
         int blockCount = (int)ceil((double)len/blocklen);
         
@@ -399,7 +464,7 @@
             
             unsigned char *cipherBuffer = calloc(clen, sizeof(unsigned char));
             unsigned char *segmentBuffer = (unsigned char *)[segmentData bytes];
-            RSA_public_encrypt(reallen, segmentBuffer, cipherBuffer, _rsaPrivate,  padding);
+            RSA_public_encrypt(reallen, segmentBuffer, cipherBuffer, privateKey,  padding);
             
             NSData *cipherData = [[NSData alloc] initWithBytes:cipherBuffer length:clen];
             if (cipherData) {
@@ -416,13 +481,14 @@
 
 - (NSData *)decryptWithPrivateKeyUsingPadding:(RSA_PADDING_TYPE)padding cipherData:(NSData *)cipherData
 {
-    NSAssert(_rsaPrivate != NULL, @"You should import private key first");
+    RSA *privateKey = [self getKey:YES];
+    NSAssert(privateKey != NULL, @"You should import private key first");
     
     if ([cipherData length])
     {
         int len = (int)[cipherData length];
         //result len
-        int mlen = RSA_size(_rsaPrivate);
+        int mlen = RSA_size(privateKey);
         int blocklen = mlen;
         int blockCount = (int)ceil((double)len/blocklen);
         
@@ -434,7 +500,7 @@
             
             unsigned char *plainBuffer = calloc(mlen, sizeof(unsigned char));
             unsigned char *segmentBuffer = (unsigned char *)[segmentData bytes];
-            RSA_private_decrypt(reallen, segmentBuffer, plainBuffer, _rsaPrivate, padding);
+            RSA_private_decrypt(reallen, segmentBuffer, plainBuffer, privateKey, padding);
             
             NSData *plainData = [[NSData alloc] initWithBytes:plainBuffer length:strlen((char *)plainBuffer)];
             if (plainData) {
@@ -451,13 +517,14 @@
 
 - (NSData *)decryptWithPublicKeyUsingPadding:(RSA_PADDING_TYPE)padding cipherData:(NSData *)cipherData
 {
-    NSAssert(_rsaPublic != NULL, @"You should import public key first");
+    RSA *pubkey = [self getKey:NO];
+    NSAssert(pubkey != NULL, @"You should import public key first");
     
     if ([cipherData length])
     {
         int len = (int)[cipherData length];
         //result len
-        int mlen = RSA_size(_rsaPrivate);
+        int mlen = RSA_size(pubkey);
         int blocklen = mlen;
         int blockCount = (int)ceil((double)len/blocklen);
         
@@ -469,7 +536,7 @@
             
             unsigned char *plainBuffer = calloc(mlen, sizeof(unsigned char));
             unsigned char *segmentBuffer = (unsigned char *)[segmentData bytes];
-            RSA_public_decrypt(reallen, segmentBuffer, plainBuffer, _rsaPrivate, padding);
+            RSA_public_decrypt(reallen, segmentBuffer, plainBuffer, pubkey, padding);
             
             NSData *plainData = [[NSData alloc] initWithBytes:plainBuffer length:strlen((char *)plainBuffer)];
             if (plainData) {
@@ -535,16 +602,17 @@
 
 - (NSData *)signWithPrivateKeyUsingDigest:(RSA_SIGN_DIGEST_TYPE)type plainData:(NSData *)plainData
 {
-    NSAssert(_rsaPrivate != NULL, @"You should import private key first");
+    RSA *privateKey = [self getKey:YES];
+    NSAssert(privateKey != NULL, @"You should import private key first");
     
     NSData *digestData = [self digestDataOfData:plainData withType:type];
     
     unsigned int len = 0;
-    unsigned int signLen = RSA_size(_rsaPrivate);
+    unsigned int signLen = RSA_size(privateKey);
     unsigned char *sign = malloc(signLen);
     memset(sign, 0, signLen);
     
-    int ret = RSA_sign(type, [digestData bytes], (unsigned int)[digestData length], sign, &len, _rsaPrivate);
+    int ret = RSA_sign(type, [digestData bytes], (unsigned int)[digestData length], sign, &len, privateKey);
     if (ret == 1) {
         NSData *data = [NSData dataWithBytes:sign length:len];
         free(sign);
@@ -556,10 +624,11 @@
 
 - (BOOL)verifyWithPublicKeyUsingDigest:(RSA_SIGN_DIGEST_TYPE)type signData:(NSData *)signData plainData:(NSData *)plainData
 {
-    NSAssert(_rsaPublic != NULL, @"You should import public key first");
+    RSA *pubkey = [self getKey:NO];
+    NSAssert(pubkey != NULL, @"You should import public key first");
     NSData *digestData = [self digestDataOfData:plainData withType:type];
     
-    int ret = RSA_verify(type, [digestData bytes], (unsigned int)[digestData length], [signData bytes], (unsigned int)[signData length], _rsaPublic);
+    int ret = RSA_verify(type, [digestData bytes], (unsigned int)[digestData length], [signData bytes], (unsigned int)[signData length], pubkey);
     if (ret == 1) {
         return YES;
     }

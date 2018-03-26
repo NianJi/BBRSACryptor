@@ -21,6 +21,11 @@
 		31389538737B0BDBB4C6166E /* libPods-rsatool.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B6C6939CE62662536D47AC7 /* libPods-rsatool.a */; };
 		3D4BA7781EB189CA00304DDC /* BBRSACryptorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4BA7771EB189CA00304DDC /* BBRSACryptorTests.m */; };
 		43BA8FAF443AFEE623D9BBB1 /* libPods-BBRSACryptorTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 42AD3D454E841072D431DF72 /* libPods-BBRSACryptorTests.a */; };
+		A34AAC9D2068A28D006FF7E6 /* rsa_public.der in Resources */ = {isa = PBXBuildFile; fileRef = A34AAC982068A28C006FF7E6 /* rsa_public.der */; };
+		A34AAC9E2068A28D006FF7E6 /* rsaCert.crt in Resources */ = {isa = PBXBuildFile; fileRef = A34AAC992068A28C006FF7E6 /* rsaCert.crt */; };
+		A34AAC9F2068A28D006FF7E6 /* rsaCertReq.csr in Resources */ = {isa = PBXBuildFile; fileRef = A34AAC9A2068A28C006FF7E6 /* rsaCertReq.csr */; };
+		A34AACA02068A28D006FF7E6 /* rsa_private.pem in Resources */ = {isa = PBXBuildFile; fileRef = A34AAC9B2068A28C006FF7E6 /* rsa_private.pem */; };
+		A34AACA12068A28D006FF7E6 /* rsa.p12 in Resources */ = {isa = PBXBuildFile; fileRef = A34AAC9C2068A28C006FF7E6 /* rsa.p12 */; };
 		A37B58F61D083BF800064059 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A37B58F51D083BF800064059 /* main.m */; };
 		A37B58FA1D08502000064059 /* BBRSACryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BD936B18DBD74D00B4515A /* BBRSACryptor.m */; };
 /* End PBXBuildFile section */
@@ -74,6 +79,11 @@
 		42AD3D454E841072D431DF72 /* libPods-BBRSACryptorTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BBRSACryptorTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		666194AF2B9D2981A9D35222 /* Pods-BBRSACryptorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BBRSACryptorTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BBRSACryptorTests/Pods-BBRSACryptorTests.release.xcconfig"; sourceTree = "<group>"; };
 		677388B766875EF1CD3B6E53 /* libPods-BBRSACryptor-ios.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BBRSACryptor-ios.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A34AAC982068A28C006FF7E6 /* rsa_public.der */ = {isa = PBXFileReference; lastKnownFileType = file; path = rsa_public.der; sourceTree = "<group>"; };
+		A34AAC992068A28C006FF7E6 /* rsaCert.crt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = rsaCert.crt; sourceTree = "<group>"; };
+		A34AAC9A2068A28C006FF7E6 /* rsaCertReq.csr */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = rsaCertReq.csr; sourceTree = "<group>"; };
+		A34AAC9B2068A28C006FF7E6 /* rsa_private.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = rsa_private.pem; sourceTree = "<group>"; };
+		A34AAC9C2068A28C006FF7E6 /* rsa.p12 */ = {isa = PBXFileReference; lastKnownFileType = file; path = rsa.p12; sourceTree = "<group>"; };
 		A37B58F31D083BF800064059 /* rsatool */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = rsatool; sourceTree = BUILT_PRODUCTS_DIR; };
 		A37B58F51D083BF800064059 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BE836E63FD7F49418AF8C927 /* Pods-BBRSACryptor-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BBRSACryptor-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BBRSACryptor-ios/Pods-BBRSACryptor-ios.debug.xcconfig"; sourceTree = "<group>"; };
@@ -125,6 +135,7 @@
 		04C693C618C0A6E5002E583E = {
 			isa = PBXGroup;
 			children = (
+				A34AAC972068A28C006FF7E6 /* cert */,
 				04BD930F18DBD6C900B4515A /* BBRSACryptor */,
 				04C693D818C0A6E5002E583E /* BBRSACryptor-ios */,
 				A37B58F41D083BF800064059 /* rsatool */,
@@ -191,6 +202,18 @@
 				3D4BA7791EB189CA00304DDC /* Info.plist */,
 			);
 			path = BBRSACryptorTests;
+			sourceTree = "<group>";
+		};
+		A34AAC972068A28C006FF7E6 /* cert */ = {
+			isa = PBXGroup;
+			children = (
+				A34AAC982068A28C006FF7E6 /* rsa_public.der */,
+				A34AAC992068A28C006FF7E6 /* rsaCert.crt */,
+				A34AAC9A2068A28C006FF7E6 /* rsaCertReq.csr */,
+				A34AAC9B2068A28C006FF7E6 /* rsa_private.pem */,
+				A34AAC9C2068A28C006FF7E6 /* rsa.p12 */,
+			);
+			path = cert;
 			sourceTree = "<group>";
 		};
 		A37B58F41D083BF800064059 /* rsatool */ = {
@@ -286,6 +309,10 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = liukun;
 				TargetAttributes = {
+					04C693CE18C0A6E5002E583E = {
+						DevelopmentTeam = N44L3X6FN9;
+						ProvisioningStyle = Automatic;
+					};
 					3D4BA7741EB189CA00304DDC = {
 						CreatedOnToolsVersion = 8.3.2;
 						ProvisioningStyle = Automatic;
@@ -321,7 +348,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				04C693DD18C0A6E5002E583E /* InfoPlist.strings in Resources */,
+				A34AACA02068A28D006FF7E6 /* rsa_private.pem in Resources */,
 				04C693E518C0A6E5002E583E /* Images.xcassets in Resources */,
+				A34AAC9E2068A28D006FF7E6 /* rsaCert.crt in Resources */,
+				A34AACA12068A28D006FF7E6 /* rsa.p12 in Resources */,
+				A34AAC9D2068A28D006FF7E6 /* rsa_public.der in Resources */,
+				A34AAC9F2068A28D006FF7E6 /* rsaCertReq.csr in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,13 +433,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BBRSACryptor-ios-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9F20EDCF27DA297FB33FF7AE /* [CP] Check Pods Manifest.lock */ = {
@@ -416,13 +451,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BBRSACryptorTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A1DB570461087B37E7F49AED /* [CP] Check Pods Manifest.lock */ = {
@@ -431,13 +469,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-rsatool-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E32E86D0A09651AEB5B3AE7A /* [CP] Copy Pods Resources */ = {
@@ -589,6 +630,10 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
 				CLANG_CXX_LIBRARY = "compiler-default";
 				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N44L3X6FN9;
+				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BBRSACryptor-ios/BBRSACryptor-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -603,9 +648,11 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/OpenSSL/lib",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "bluebox.BBRSACryptor-ios.test";
 				PRODUCT_NAME = "BBRSACryptor-ios";
-				PROVISIONING_PROFILE = "c79a06c7-a3f2-4403-89a7-189e0f303eee";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "c79a06c7-a3f2-4403-89a7-189e0f303eee";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -619,6 +666,10 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
 				CLANG_CXX_LIBRARY = "compiler-default";
 				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N44L3X6FN9;
+				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BBRSACryptor-ios/BBRSACryptor-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -633,9 +684,11 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/OpenSSL/lib",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "bluebox.BBRSACryptor-ios.test";
 				PRODUCT_NAME = "BBRSACryptor-ios";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -758,6 +811,7 @@
 				3D4BA77E1EB189CA00304DDC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A37B58F91D083BF800064059 /* Build configuration list for PBXNativeTarget "rsatool" */ = {
 			isa = XCConfigurationList;

@@ -137,6 +137,21 @@
            forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:_buttonT];
     }
+    
+    {
+        UIButton *_buttonT = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+        _buttonT.frame = CGRectMake(44*6, top, 44, 44);
+        _buttonT.tag = 6;
+        [_buttonT setTitle:@"导入p12" forState:UIControlStateNormal];
+        _buttonT.titleLabel.numberOfLines = 2;
+        _buttonT.titleLabel.lineBreakMode = NSLineBreakByCharWrapping;
+        _buttonT.titleLabel.font = [UIFont systemFontOfSize:15.0f];
+        [_buttonT setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [_buttonT addTarget:self
+                     action:@selector(buttonTapped:)
+           forControlEvents:UIControlEventTouchUpInside];
+        [self.view addSubview:_buttonT];
+    }
 }
 
 - (UITextView *)textView
@@ -326,6 +341,20 @@
 //        NSString *str = [NSString stringWithFormat:@"解密可得: \n%@", plainText];
 //        
 //        [self appendStringToResultTextView:str];
+    }
+    else if (index == 6)
+    {
+        NSString *p12File = [[NSBundle mainBundle] pathForResource:@"rsa" ofType:@"p12"];
+        NSData *data = [NSData dataWithContentsOfFile:p12File];
+        
+        BOOL importSuccess = [self.rsaCryptor importKeysFromP12Data:data password:@"123456"];
+        UIAlertView *alert = [[UIAlertView alloc]
+                              initWithTitle:nil
+                              message:importSuccess? @"导入成功":@"导入失败"
+                              delegate:nil
+                              cancelButtonTitle:@"确定"
+                              otherButtonTitles:nil];
+        [alert show];
     }
 }
 
